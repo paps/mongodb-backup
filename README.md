@@ -15,7 +15,10 @@ It is recommended to add a separate user for backuping purposes, with minimal re
     git clone https://github.com/paps/mongodb-backup.git
     cd mongodb-backup
     cp config.sh.sample config.sh
+    chmod og-rwx config.sh
     vim config.sh
+
+Do not forget to remove read rights on `config.sh` because this file contains passwords.
 
 Usage
 -----
@@ -27,9 +30,9 @@ Crontab
 
 Example for 2 backups per day:
 
-# m h  dom mon dow   command
- 00 13 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
- 00 21 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
+    # m h  dom mon dow   command
+     00 13 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
+     00 21 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
 
 Links
 -----
