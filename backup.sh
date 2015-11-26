@@ -77,7 +77,7 @@ then
     echo ""
     echo "Copying via FTP:"
     echo ""
-    ncftpput -u "$ftpLogin" -p "$ftpPassword" "$ftpHost" "$ftpPath" "$tarFile"
+    ncftpput -u "$ftpLogin" -p "$ftpPassword" "$ftpHost" "$ftpFolder" "$tarFile"
     success=$?
     if [ $success -ne 0 ]
     then
