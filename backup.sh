@@ -29,10 +29,10 @@ df -h
 echo ""
 echo "---------------------"
 
-baseName="dump-`date '+%u-%H'`"
+baseName="mongodb-dump-`date '+%a-%Hh'`"
 
 echo ""
-echo "Dumping MongoDB to $baseName"
+echo "Dumping MongoDB to $baseName:"
 echo ""
 
 mongodump --username "$username" --password "$password" --oplog --out "$baseName"
@@ -99,7 +99,7 @@ then
         exit 1
     fi
     . $scpSshEnv
-    scp "$tarFile" "$scpPath"
+    scp -v "$tarFile" "$scpPath"
     success=$?
     if [ $success -ne 0 ]
     then
