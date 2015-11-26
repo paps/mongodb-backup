@@ -20,6 +20,8 @@ It is recommended to add a separate user for backuping purposes, with minimal re
 
 Do not forget to remove read rights on `config.sh` because this file contains passwords.
 
+MongoDB must have an oplog (`master = true` in `/etc/mongodb.conf`).
+
 Usage
 -----
 
