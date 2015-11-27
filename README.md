@@ -25,7 +25,7 @@ MongoDB must have an oplog (`master = true` in `/etc/mongodb.conf`).
 Usage
 -----
 
-`./backup-launcher.sh /absolute/path/to/backup/dir`
+`./backup-launcher.sh /absolute/path/to/git/repo`
 
 Crontab
 -------
@@ -33,8 +33,8 @@ Crontab
 Example for 2 backups per day:
 
     # m h  dom mon dow   command
-     00 13 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
-     00 21 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
+     10 13 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
+     10 21 *   *   *     /home/user/mongodb-backup/backup-launcher.sh /home/user/mongodb-backup > /dev/null 2>&1
 
 Links
 -----
