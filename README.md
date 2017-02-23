@@ -1,5 +1,5 @@
-mongodb-backup ![project-status](http://stillmaintained.com/paps/mongodb-backup.png)
-====================================================================================
+mongodb-backup
+==============
 
 Shell script for putting `mongodump` into your crontab.
 
